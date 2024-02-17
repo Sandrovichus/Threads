@@ -32,8 +32,7 @@ public class Main {
                 }
                 System.out.println(text.substring(0, 100) + " -> " + maxSize);
             };
-            Thread thread = new Thread(runnable);
-            threads.add(thread);
+            threads.add(new Thread(runnable));
         }
 
         for (Thread thread : threads) {
